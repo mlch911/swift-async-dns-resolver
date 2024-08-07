@@ -21,8 +21,12 @@ do {
 
 let package = Package(
     name: "swift-async-dns-resolver",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         .library(name: "AsyncDNSResolver", targets: ["AsyncDNSResolver"]),
+        .library(name: "CAsyncDNSResolver", targets: ["CAsyncDNSResolver"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
